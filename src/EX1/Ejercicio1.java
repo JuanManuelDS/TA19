@@ -21,25 +21,6 @@ public class Ejercicio1 extends JFrame {
 	private JPanel contentPane;
 	private JTextField textField;
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Ejercicio1 frame = new Ejercicio1();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
-	/**
-	 * Create the frame.
-	 */
 	public Ejercicio1() {
 		setTitle("Saludador");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -49,14 +30,7 @@ public class Ejercicio1 extends JFrame {
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		StringBuilder sb = new StringBuilder();
 		textField = new JTextField();
-		textField.addKeyListener(new KeyAdapter() {
-			@Override
-			public void keyTyped(KeyEvent e) {
-				sb.append(e.getKeyChar());
-			}
-		});
 		
 		textField.setBounds(84, 117, 266, 20);
 		contentPane.add(textField);
@@ -69,10 +43,12 @@ public class Ejercicio1 extends JFrame {
 		JButton btnNewButton = new JButton("Saludar");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				JOptionPane.showMessageDialog(contentPane, "Hola " + sb + "!");
+				JOptionPane.showMessageDialog(contentPane, "Hola " + textField.getText() + "!");
 			}
 		});
 		btnNewButton.setBounds(171, 148, 89, 23);
 		contentPane.add(btnNewButton);
+		
+		setVisible(true);
 	}
 }

@@ -19,25 +19,6 @@ public class Ejercicio3 extends JFrame {
 
 	private JPanel contentPane;
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Ejercicio3 frame = new Ejercicio3();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
-	/**
-	 * Create the frame.
-	 */
 	public Ejercicio3() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 441);
@@ -47,6 +28,8 @@ public class Ejercicio3 extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 
+		
+		//-----------------Radio Buttons-----------------------------
 		JRadioButton rdbtnNewRadioButton = new JRadioButton("Windows");
 		rdbtnNewRadioButton.setBounds(162, 34, 109, 23);
 		contentPane.add(rdbtnNewRadioButton);
@@ -64,6 +47,8 @@ public class Ejercicio3 extends JFrame {
 		bgroup.add(rdbtnNewRadioButton_1);
 		bgroup.add(rdbtnNewRadioButton_2);
 
+		
+		//-----------------JLabels----------------------------------------
 		JLabel lblNewLabel = new JLabel("Elija un sistema operativo");
 		lblNewLabel.setBounds(143, 13, 148, 14);
 		contentPane.add(lblNewLabel);
@@ -71,7 +56,13 @@ public class Ejercicio3 extends JFrame {
 		JLabel lblNewLabel_1 = new JLabel("Elija su especialidad");
 		lblNewLabel_1.setBounds(134, 132, 116, 14);
 		contentPane.add(lblNewLabel_1);
-
+		
+		JLabel lblNewLabel_2 = new JLabel("Horas diarias dedicadas al ordenador");
+		lblNewLabel_2.setBounds(117, 262, 200, 14);
+		contentPane.add(lblNewLabel_2);
+		
+		
+		//--------------------Checkbox buttons----------------------------
 		JCheckBox chckbxNewCheckBox = new JCheckBox("Programación");
 		chckbxNewCheckBox.setBounds(143, 153, 128, 23);
 		contentPane.add(chckbxNewCheckBox);
@@ -84,10 +75,8 @@ public class Ejercicio3 extends JFrame {
 		chckbxAdministracin.setBounds(143, 205, 148, 23);
 		contentPane.add(chckbxAdministracin);
 
-		JLabel lblNewLabel_2 = new JLabel("Horas diarias dedicadas al ordenador");
-		lblNewLabel_2.setBounds(117, 262, 200, 14);
-		contentPane.add(lblNewLabel_2);
-
+		
+		//----------------------------Slider------------------------------
 		JSlider slider = new JSlider();
 		slider.setPaintTicks(true);
 		slider.setPaintLabels(true);
@@ -95,7 +84,9 @@ public class Ejercicio3 extends JFrame {
 		slider.setMaximum(10);
 		slider.setBounds(117, 287, 200, 45);
 		contentPane.add(slider);
-
+		
+		
+		//---------- Button & Button event -----------------------------
 		JButton btnNewButton = new JButton("Enviar datos");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -127,5 +118,7 @@ public class Ejercicio3 extends JFrame {
 		});
 		btnNewButton.setBounds(108, 353, 217, 23);
 		contentPane.add(btnNewButton);
+		
+		setVisible(true);
 	}
 }

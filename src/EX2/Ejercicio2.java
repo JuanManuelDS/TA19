@@ -18,26 +18,8 @@ public class Ejercicio2 extends JFrame {
 	private JPanel contentPane;
 	private JTextField textField;
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Ejercicio2 frame = new Ejercicio2();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
-	/**
-	 * Create the frame.
-	 */
 	public Ejercicio2() {
+		
 		setTitle("Peliculas");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
@@ -71,6 +53,6 @@ public class Ejercicio2 extends JFrame {
 		btnNewButton.setBounds(66, 155, 89, 23);
 		contentPane.add(btnNewButton);
 		
-		
+		setVisible(true);
 	}
 }
