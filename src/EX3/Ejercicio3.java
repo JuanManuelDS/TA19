@@ -122,7 +122,7 @@ public class Ejercicio3 extends JFrame {
 				int horas = slider.getValue();
 
 				JOptionPane.showMessageDialog(contentPane, "Sistema operativo:\n" + sistemaOperativo
-						+ "\n\nEspecialidad/es:\n" + especialidad + "\nHoras: " + horas);
+						+ "\n\nEspecialidad/es:\n" + especialidad + "\n\nHoras: " + horas);
 			}
 		});
 		btnNewButton.setBounds(108, 353, 217, 23);
